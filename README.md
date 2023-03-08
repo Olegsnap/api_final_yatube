@@ -60,4 +60,5 @@ python3 manage.py runserver
 
 ### Автор
 Олег Асташкин :koala:
+
 [GitHub Profile](https://github.com/Olegsnap)
