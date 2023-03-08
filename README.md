@@ -59,4 +59,4 @@ python3 manage.py runserver
 - ```POST api/v1/follow/``` - подписка пользователя на автора
 
 ### Автор
-Олег Асташкин ([GitHub Profile](https://github.com/Olegsnap))
+Олег Асташкин ([<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/Olegsnap))
