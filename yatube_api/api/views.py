@@ -7,16 +7,18 @@ from posts.models import Group, Follow, Post, User
 from api.serializers import (
     CommentSerializer, GroupSerializer, FollowSerializer, PostSerializer
 )
-from api.permissions import AuthorPermissions
+from api.permissions import AuthorPermission
 
 
 class PostViewSet(viewsets.ModelViewSet):
-    """Вьюсет для объектов Post."""
+    """
+    Вьюсет для объектов Post.
+    """
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     permission_classes = (
         permissions.IsAuthenticatedOrReadOnly,
-        AuthorPermissions,
+        AuthorPermission,
     )
     pagination_class = LimitOffsetPagination
 
@@ -35,11 +37,13 @@ class GroupViewSet(viewsets.ReadOnlyModelViewSet):
 
 
 class CommentViewSet(viewsets.ModelViewSet):
-    """Вьюсет для объектов Comment."""
+    """
+    Вьюсет для объектов Comment.
+    """
     serializer_class = CommentSerializer
     permission_classes = (
         permissions.IsAuthenticatedOrReadOnly,
-        AuthorPermissions,
+        AuthorPermission,
     )
 
     def get_queryset(self):
@@ -60,7 +64,7 @@ class FollowViewSet(viewsets.ModelViewSet):
     serializer_class = FollowSerializer
     permission_classes = (
         permissions.IsAuthenticated,
-        AuthorPermissions,
+        AuthorPermission,
     )
     filter_backends = (filters.SearchFilter,)
     search_fields = ('=user__username', '=following__username')

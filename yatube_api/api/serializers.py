@@ -23,7 +23,9 @@ class PostSerializer(serializers.ModelSerializer):
 
 
 class GroupSerializer(serializers.ModelSerializer):
-    """Сериализует поля объекта Group."""
+    """
+    Сериализует поля объекта Group.
+    """
     class Meta:
         fields = '__all__'
         model = Group

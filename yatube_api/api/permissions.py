@@ -1,7 +1,7 @@
 from rest_framework import permissions
 
 
-class AuthorPermissions(permissions.BasePermission):
+class AuthorPermission(permissions.BasePermission):
     """
     Предоставляет доступ безопасными методами к объекту
     и запрещает небезопасные, если запращивающий пользователь не
